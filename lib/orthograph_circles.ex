@@ -1,6 +1,6 @@
 defmodule WordChunkCircles do
   @moduledoc """
-  Documentation for OrthographCircles.
+  Documentation for WordChunkCircles.
   """
 
   def solve(word_chunks, word_map) do

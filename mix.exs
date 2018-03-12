@@ -1,4 +1,4 @@
-defmodule OrthographCircles.MixProject do
+defmodule WordChunkCircles.MixProject do
   use Mix.Project
 
   def project do
