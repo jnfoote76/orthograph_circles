@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :orthograph_circles, key: :value
+#     config :word_chunk_circles, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:orthograph_circles, :key)
+#     Application.get_env(:word_chunk_circles, :key)
 #
 # You can also configure a 3rd-party app:
 #

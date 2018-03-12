@@ -32,11 +32,11 @@ defmodule SolveServer do
         {:ok, word_map}
     end
 
-    def solve(pid, orthographs) do
-        GenServer.call(pid, {:solve, orthographs})
+    def solve(pid, word_chunks) do
+        GenServer.call(pid, {:solve, word_chunks})
     end
 
     def handle_call({:solve, orthographs}, _, state) do
-        {:reply, OrthographCircles.solve(orthographs, state), state}
+        {:reply, WordChunkCircles.solve(orthographs, state), state}
     end
 end

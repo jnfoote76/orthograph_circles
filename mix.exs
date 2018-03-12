@@ -3,9 +3,9 @@ defmodule OrthographCircles.MixProject do
 
   def project do
     [
-      app: :orthograph_circles,
+      app: :word_chunck_circles,
       version: "0.1.0",
-      elixir: "~> 1.6",
+      elixir: "~> 1.4",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]

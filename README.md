@@ -1,21 +1,49 @@
-# OrthographCircles
+# WordChunkCircles
 
-**TODO: Add description**
+Given a list of digraphs or trigraphs (or really, character sequences of any length), this solver returns the elements in an order such that each adjacent pair of chunks forms a valid word and the last chunk circles back to the first element (if such an order exists). If it exists, it will return all valid circles, each starting with the chunk that appears first alphabetically (otherwise, it returns an empty list). 
 
-## Installation
+## Dependencies
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `orthograph_circles` to your list of dependencies in `mix.exs`:
+If you haven't already, [install Erlang and Elixir](https://elixir-lang.org/install.html).
 
-```elixir
-def deps do
-  [
-    {:orthograph_circles, "~> 0.1.0"}
-  ]
-end
+Additionally, you'll need a text file containing a list of valid words (each word separated by a newline character). In my examples, I'm use "words_alpha.txt" found at https://github.com/dwyl/english-words
+
+## Usage
+
+Build the project and initialize a GenServer that constructs and stores a valid word map
+```
+$ iex -S mix
+iex> {:ok, pid} = SolveServer.start_link("words_alpha.txt")
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/orthograph_circles](https://hexdocs.pm/orthograph_circles).
+A few sample puzzle solutions, with solutions hidden in case you actually want to try solving them yourself:
+
+```
+iex> SolveServer.solve(pid, ["AL", "AT", "EL", "FA", "KE", "OP", "SE", "SO"])
+```
+
+<details><summary>Solution</summary><p>
+```
+[["AL", "SO", "FA", "KE", "EL", "SE", "AT", "OP"]]
+```
+</p></details>
+
+```
+iex> SolveServer.solve(pid, ["HER", "MIT", "NET", "PER", "PIN", "SON", "SUP", "TEN", "TOS"])
+```
+<details><summary>Solution</summary><p>
+```
+[["HER", "MIT", "TEN", "PIN", "TOS", "SUP", "PER", "SON", "NET"]]
+```
+</p></details>
+
+```
+iex> SolveServer.solve(pid, ["ANT", "ASH", "ASY", "BAL", "BAS", "CAL", "CAN", "DES", "HER", "INS", "LUM", "MAN", "MER", "PED", "POT", "QUE", "RAS", "SAM", "TOR", "TRA", "ULT"])
+```
+<details><summary>Solution</summary><p>
+```
+[["ANT", "HER", "BAL", "SAM", "BAS", "INS", "ULT", "RAS", "CAL", "MER", "MAN",
+  "TRA", "DES", "POT", "ASH", "CAN", "TOR", "QUE", "ASY", "LUM", "PED"]]
+```
+</p></details>
 
