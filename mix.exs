@@ -3,7 +3,7 @@ defmodule WordChunkCircles.MixProject do
 
   def project do
     [
-      app: :word_chunck_circles,
+      app: :word_chunk_circles,
       version: "0.1.0",
       elixir: "~> 1.4",
       start_permanent: Mix.env() == :prod,
