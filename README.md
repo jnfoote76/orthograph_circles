@@ -22,27 +22,21 @@ A few sample puzzle solutions, with solutions hidden in case you actually want t
 iex> SolveServer.solve(pid, ["AL", "AT", "EL", "FA", "KE", "OP", "SE", "SO"])
 ```
 <details><summary>Solution</summary><p>
----
 [["AL", "SO", "FA", "KE", "EL", "SE", "AT", "OP"]]
----
 </p></details>
 
 ```
 iex> SolveServer.solve(pid, ["HER", "MIT", "NET", "PER", "PIN", "SON", "SUP", "TEN", "TOS"])
 ```
 <details><summary>Solution</summary><p>
----
 [["HER", "MIT", "TEN", "PIN", "TOS", "SUP", "PER", "SON", "NET"]]
----
 </p></details>
 
 ```
 iex> SolveServer.solve(pid, ["ANT", "ASH", "ASY", "BAL", "BAS", "CAL", "CAN", "DES", "HER", "INS", "LUM", "MAN", "MER", "PED", "POT", "QUE", "RAS", "SAM", "TOR", "TRA", "ULT"])
 ```
 <details><summary>Solution</summary><p>
----
 [["ANT", "HER", "BAL", "SAM", "BAS", "INS", "ULT", "RAS", "CAL", "MER", "MAN",
   "TRA", "DES", "POT", "ASH", "CAN", "TOR", "QUE", "ASY", "LUM", "PED"]]
----
 </p></details>
 
