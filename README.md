@@ -6,7 +6,7 @@ Given a list of digraphs or trigraphs (or really, character sequences of any len
 
 If you haven't already, [install Erlang and Elixir](https://elixir-lang.org/install.html).
 
-Additionally, you'll need a text file containing a list of valid words (each word separated by a newline character). In my examples, I'm use "words_alpha.txt" found at https://github.com/dwyl/english-words
+Additionally, you'll need a text file containing a list of valid words (each word separated by a newline character). In my examples, I use "words_alpha.txt" found at https://github.com/dwyl/english-words
 
 ## Usage
 
